@@ -1,27 +1,22 @@
 #include<stdio.h>
 
-#define SIZE s
-
-int carry(int *a,int *b)
+void carry(int *a,int *b)
 {
 if(*a>=10){*b += *a / 10;
           *a = *a % 10;}
 }
 
-int main(int argc,char* argv[])
-{
-int s;
-s = argv[1][0] - '0';
-
-int A[SIZE],B[SIZE];
-for(int i=0;i<SIZE;i++)
-{
-A[i] = argv[2][SIZE-1-i] - '0';
-B[i] = argv[3][SIZE-1-i] - '0';
+void edd(int s,int A[],int B[],int C[]) {
+	int a = 0;
+	for(int i=0;i<s;i++) {
+		C[i] += A[i] + B[i];
+		carry(&C[i],&C[i+1]);
+    }
 }
-int C[SIZE*2];
-for(int i=0;i<(SIZE*2);i++)
-C[i] = 0; 
+
+void bitwise(int s,int A[],int B[], int C[]) {
+
+int SIZE = s;
 
 int p = 0;
 
@@ -33,13 +28,8 @@ for(int j=0;j<SIZE;j++){ p = (A[j])*(B[i]);
 		                 C[i + j + 1] += p/10;
 		                 printf("p = %d*%d = %d\t",A[j],B[i],p);
 		                 for(int k=(SIZE*2)-1;k>=0;k--)
-		                	printf("%d  ",C[k]);
-		                printf("\t");}
+		                	printf("%d",C[k]);
+		                printf("%c%c",32,32);}
 printf("\n");
 }
-
-
-
-for(int i=(SIZE*2)-1;i>=0;i--){printf("%d",C[i]);}
-printf("\n");
 }
