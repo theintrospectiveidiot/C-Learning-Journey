@@ -8,6 +8,9 @@ Then, thought that it would be really really cool to have a program that updates
 
 So, I created this version of trojanized quine which does that.
 
+Added a beginner version control system which allows you to move between generations.
+
 ## Notes
 - The debugging was really satisfying.
 - This is really cool man, I just can't stop admiring it!!
+- Git is for losers!!!!!!!!!(/s)
