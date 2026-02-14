@@ -10,6 +10,10 @@ So, I created this version of trojanized quine which does that.
 
 Added a beginner version control system which allows you to move between generations.
 
+bite_me does what it used to do, mutate the original code to change the generation count, but now, it saves the previous generation (ancestor) in "collection_of_all_sins".
+
+visit_cemetery allows you to fetch the ancestors if the current generation isn't upto the mark.
+
 ## Notes
 - The debugging was really satisfying.
 - This is really cool man, I just can't stop admiring it!!
