@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(int argc,char *argv[]) {
-	FILE *g = fopen("collection_of_all_sins","a+");
+	FILE *g = fopen(argv[2],"a+");
 	FILE *f = fopen(argv[1],"r");
 	char c;
 	fputc(60,g);
