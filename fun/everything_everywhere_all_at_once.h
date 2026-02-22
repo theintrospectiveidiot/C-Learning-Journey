@@ -130,6 +130,7 @@ void bubble_sort() {
 	int i,j,k;
 
 	for(i=0;i<5;i++) {
+		put_stuff("Enter number ~d: ",i);
 		get_stuff("~d",&A[i]);
 	}
 
@@ -166,6 +167,7 @@ int k,i,t,j;
 
 for(i=0;i<5;i++)
 {
+put_stuff("Enter number ~d: ",i);
 get_stuff("~d",&A[i]);}
 
 for(j=0;j<5;j++){
